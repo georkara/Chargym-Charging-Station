@@ -2,7 +2,7 @@
 Chargym is an open source OpenAI Gym environment for the implementation of Reinforcement Learning (RL), Rule-based approaches (RB) and Intelligent Control (IC) for charging scheduling at an EV charging station with a defined number of charging spots and random EV arrivals and departures within day.
 
 
-The charging station interaction system will be placed here
+The Chargym interaction system is illustrated below:
 
 ![Ev Station](https://github.com/georkara/Chargym-Charging-Station/blob/main/Chargym_Charging_Station/images/Chargym_interaction_system.jpg)
 
