@@ -4,7 +4,8 @@ Chargym is an open source OpenAI Gym environment for the implementation of Reinf
 
 The charging station interaction system will be placed here
 
-![Ev Station](https://github.com/[name]/[reponame]/blob/master/images/scheme.jpg)
+![Ev Station](https://github.com/georkara/Chargym-Charging-Station/blob/master/Chargym_Charging_Station/images/Chargym_interaction_system.jpg)
+
 
 ## Chargym Description
 The EV charging station is composed of one PV and 10 charging spots. 
