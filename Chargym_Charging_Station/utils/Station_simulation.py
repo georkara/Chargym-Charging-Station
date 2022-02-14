@@ -1,6 +1,6 @@
 import numpy as np
 
-def bulubas_seperate(self):
+def Station_simulation(self):
 
     BOC = self.BOC
     Arrival=self.Invalues['ArrivalT']
