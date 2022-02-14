@@ -131,7 +131,7 @@ States space: [0-1000, 0-300, 0-1000, 0-1000, 0-1000, 0-300, 0-300, 0-300, 0-100
 
 ## Reward function
 
-The reward function is described in either [Simulate_RBC.py](/gym_Charging_Station/Simulate_RBC.py) (for control_flag=0) or [Simulate_Actions.py](/gym_Charging_Station/Simulate_Actions.py) (for case control_flag=1).
+The reward function is described in either [Simulate_RBC.py](/Chargym_Charging_Station/utils/Simulate_RBC.py) (for control_flag=0) or [Simulate_Actions.py](/Chargym_Charging_Station/utils/Simulate_Actions.py) (for case control_flag=1).
 ```RBC_Cost``` is the reward function, which is the multiplication of the amount of energy used from the power grid with the current price of KWh (RBC_Cost = Grid_final*self.Energy["Price"][0,hour]).
 
 ## How to run-Test example
