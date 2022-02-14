@@ -27,7 +27,7 @@ Otherwise, it gets the label “stay”. This property allows the charging stati
 “stay” vehicles to satisfy the demands of the classified as “leave” ones as mentioned above. 
 Note also that each parking/charging spot can be used as many times as possible within day if available/free.
 
-The environment offers two operational options [ control_flag in class ```ChargingEnv``` in the file [Charging_Station_Enviroment.py](/gym_Charging_Station/Files/Charging_Station_Enviroment.py) ]. The first one is [Simulate_RBC.py](/gym_Charging_Station/Simulate_RBC.py) (control_flag=0) while the second is [Simulate_Actions.py](/gym_Charging_Station/Simulate_Actions.py) (control_flag=1).
+The environment offers two operational options [ control_flag in class ```ChargingEnv``` in the file [Charging_Station_Enviroment.py](/Chargym_Charging_Station/envs/Charging_Station_Enviroment.py) ]. The first one is [Simulate_RBC.py](/Chargym_Charging_Station/utils/Simulate_RBC.py) (control_flag=0) while the second is [Simulate_Actions.py](/Chargym_Charging_Station/utils/Simulate_Actions.py) (control_flag=1).
 
 The main objective of this problem is to minimize the cost for the electricity absorbed by the power grid
 ensuring that all EVs reach the desired level of State of Charge (100% - see __Assumption 3__ below).
