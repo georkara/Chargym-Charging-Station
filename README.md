@@ -109,7 +109,7 @@ Refer to [requirements.txt](requirements.txt) for a list of Python library depen
 
 - [Charging_Station_Enviroment.py](/Chargym_Charging_Station/envs/Charging_Station_Enviroment.py): more will be included.
 
-- [main.py](/Chargym-Charging-Station/Solvers/main.py): more will be included.
+- [main.py](/Solvers/main.py): more will be included.
 
 
 ## Charging Station Environment Variables
@@ -142,7 +142,8 @@ that are easy for users and practictioners to use.
 
 ### Custom implementation
 In case that the user wants to check his/her own controller than the provided ones, import Chargym and then
-call the make method specifying the name of the model (__ChargingEnv-v0__) as in other gym environment.
+call the make method specifying the name of the model (__ChargingEnv-v0__) as in other gym environment. You can
+place your custom algorithm in Folder  __Solvers__
 ```
 import gym
 import Chargym_Charging_Station
