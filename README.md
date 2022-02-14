@@ -4,7 +4,7 @@ Chargym is an open source OpenAI Gym environment for the implementation of Reinf
 
 The charging station interaction system will be placed here
 
-![Ev Station](https://github.com/georkara/Chargym-Charging-Station/blob/Chargym-Charging-Station/Chargym_Charging_Station/images/Chargym_interaction_system.jpg)
+![Ev Station](https://github.com/georkara/Chargym-Charging-Station/tree/main/Chargym_Charging_Station/images/Chargym_interaction_system.jpg)
 
 
 ## Chargym Description
