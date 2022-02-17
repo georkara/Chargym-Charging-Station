@@ -54,6 +54,7 @@ Open project, choose system interpreter (_we recommend an environment with Pytho
 ```console
 cd Chargym-Charging-Station
 pip install -e .
+pip install stable-baselines3[extra]
 ```
 
 
