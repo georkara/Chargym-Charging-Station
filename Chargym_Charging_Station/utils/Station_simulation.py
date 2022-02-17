@@ -1,6 +1,6 @@
 import numpy as np
 
-def Station_simulation(self):
+def station_simulation(self):
 
     BOC = self.BOC
     Arrival=self.Invalues['ArrivalT']
