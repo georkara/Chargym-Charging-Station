@@ -48,7 +48,7 @@ _Assumption 5_: The maximum charging supply of each EV is dictated by charging/d
 
 ## Installation-Requirements
 In order to install, download the zip file or use git.
-Open project, choose system interpreter and follow the command:
+Open project, choose system interpreter (_we recommend an environment with Python version 3.6 or above_) and follow the command:
 
 ```console
 cd Chargym-Charging-Station
