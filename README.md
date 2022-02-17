@@ -58,7 +58,7 @@ pip install stable-baselines3[extra]
 ```
 
 
-Refer to [requirements.txt](requirements.txt) for a list of Python library dependencies. You may install the required libraries by executing the following command:
+[__No need to install requirements__]Refer to [requirements.txt](requirements.txt) for a list of Python library dependencies. You may install the required libraries by executing the following command:
  ```console
  pip install -r requirements.txt
  ```
