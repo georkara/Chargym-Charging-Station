@@ -121,7 +121,7 @@ class ChargingEnv(gym.Env):
             self.Cost_History = []
             self.BOC = self.Invalues["BOC"]
 
-        [Battery, Pdemand, stay_new, leave, BOC] = Station_simulation(self)
+        [Battery, Pdemand, stay_new, leave, BOC] = Station_simulation.station_simulation(self)
         pointer = len(stay_new)
         if pointer == 0:
             pointer = 0.0000001
