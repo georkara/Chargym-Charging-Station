@@ -99,7 +99,7 @@ pip install stable-baselines3[extra]
           └── __init__.py
 
         └── Solvers
-          └── main.py
+          ├── main.py
           └── DDPG
             └── DDPG.py
 
