@@ -48,7 +48,7 @@ _Assumption 5_: The maximum charging supply of each EV is dictated by charging/d
 
 ## Installation-Requirements
 In order to install, download the zip file or use git.
-Open project, choose system interpreter (_we recommend an environment with Python version 3.6 or above_ because the provided examples are based on Stable-Baselines3
+Open project, choose system interpreter (_we recommend an environment with Python version 3.7 or above_ because the provided examples are based on Stable-Baselines3
 [SB3](https://github.com/DLR-RM/stable-baselines3). But if you want you can use other implementations too.) and follow the command:
 
 ```console
