@@ -99,10 +99,12 @@ pip install stable-baselines3[extra]
           └── __init__.py
 
         └── Solvers
-          ├── main.py
-          └── DDPG
-            └── DDPG.py
-
+          ├── RBC
+            └── RBC_controller.py
+          ├── RL
+            └── A2C.py
+          └── main.py
+          
 
 
 - [Energy_Calculations.py](/Chargym_Charging_Station/utils/Energy_Calculations.py): more will be included.
