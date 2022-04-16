@@ -185,7 +185,8 @@ If you want to train either DDPG or PPO using Chargym:
 2. __then run [DDPG_train.py](Solvers/RL/DDPG_train.py) and [PPO_train.py](Solvers/RL/PPO_train.py)__.
 
 If you want to evaluate the trained models:
-1. __You have to modify by hand [Charging_Station_Enviroment.py](/Chargym_Charging_Station/envs/Charging_Station_Enviroment.py) in line 89 to - def reset(self, reset_flag): - removing the value of reset_flag__.
+1. __You have to modify by hand [Charging_Station_Enviroment.py](/Chargym_Charging_Station/envs/Charging_Station_Enviroment.py) in line 89 to:
+``` def reset(self, reset_flag) ``` removing the value of reset_flag__.
 2. __then run [evaluate_trained_models.py](/Solvers/evaluate_trained_models.py) and you will get the comparison performance between DDPG, PPO and RBC__. 
 
 
