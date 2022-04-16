@@ -117,7 +117,7 @@ pip install stable-baselines3[extra]
 - [DDPG_train.py](Solvers/RL/DDPG_train.py): This python file includes conventional DDPG implementation. __Note that when you run this script 2 additional folders will be created including log files and the trained model at different stages. The later will be used in order to evaluate the trained algorithm during the evaluation phase__.
 - [PPO_train.py](Solvers/RL/PPO_train.py): This python file includes conventional PPO implementation. __Note that when you run this script 2 additional folders will be created including log files and the trained model at different stages as in DDPG case. Logs and models have the corresponding tag 'PPO-.....'. The trained model will be used in order to evaluate the PPO algorithm during the evaluation phase__.
 
-- [check_main.py](/Solvers/check_main.py): This is to check the Chargym environment.
+- [check_main.py](/Solvers/check_main.py): This is to call the Chargym environment.
 - [evaluate_trained_models.py](/Solvers/evaluate_trained_models.py): This is to evaluate the trained models (DDPG,PPO and RBC).Indicatevely in paper we used the trained models at 940000 so as at lines 23 and 27 the corresponding .zip files are loaded.
 
 
