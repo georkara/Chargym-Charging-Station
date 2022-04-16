@@ -200,7 +200,7 @@ _If you want to visualize the training_:
 1. __Use the following in the terminal: 
 ```tensorboard --logdir logs```
 This way the tensorboard will be opened by pressing on the localhost. Indicatively you will have in your browser something like the following:
-![Tensorboard](https://github.com/georkara/Chargym-Charging-Station/blob/main/Chargym_Charging_Station/images/indicative_tensorboard.png)__
+![Tensorboard](https://github.com/georkara/Chargym-Charging-Station/blob/main/Chargym_Charging_Station/images/Indicative_tensorboard.png)__
 
 # Citation
 If you find this useful for your research, please cite the following:
