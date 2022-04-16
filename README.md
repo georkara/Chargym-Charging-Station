@@ -6,9 +6,7 @@ The Chargym interaction system is illustrated below:
 
 ![Ev Station](https://github.com/georkara/Chargym-Charging-Station/blob/main/Chargym_Charging_Station/images/Chargym_interaction_system.jpg)
 
-You can fing the Chargym preprint paper in:
-
-![Chargym paper](https://github.com/georkara/Chargym-Charging-Station/blob/main/Chargym_preprint_paper.pdf)
+You can fing the Chargym preprint paper in: (https://github.com/georkara/Chargym-Charging-Station/blob/main/Chargym_preprint_paper.pdf)
 
 
 ## Chargym Description
