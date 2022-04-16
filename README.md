@@ -86,8 +86,7 @@ pip install stable-baselines3[extra]
             ├── Energy_Calculations.py
             ├── Init_Values.py
             ├── Simulate_Actions3.py
-            ├── Simulate_RBC.py
-            └── Station_simulation3.py
+            └── Simulate_Station3.py
 
           └── __init__.py
 
@@ -102,24 +101,20 @@ pip install stable-baselines3[extra]
           
 
 
+- [Charging_Station_Enviroment.py](/Chargym_Charging_Station/envs/Charging_Station_Enviroment.py): Describes the general Electrical Vecicles Charging Station universe.
+
 - [Energy_Calculations.py](/Chargym_Charging_Station/utils/Energy_Calculations.py): more will be included.
 - [Init_Values.py](/Chargym_Charging_Station/utils/Init_Values.py): more will be included.
-- [Simulate_Actions.py](/Chargym_Charging_Station/utils/Simulate_Actions.py): more will be included.
-- [Simulate_RBC.py](/Chargym_Charging_Station/utils/Simulate_RBC.py): more will be included.
-- [Station_simulation.py](/Chargym_Charging_Station/utils/Station_simulation.py): more will be included.
-
-- [Charging_Station_Enviroment.py](/Chargym_Charging_Station/envs/Charging_Station_Enviroment.py): more will be included.
-
-- [check_main.py](/Solvers/main.py): This is to check the Chargym environment.
-
-- [evaluate_trained_models.py](/Solvers/main.py): This is to evaluate the trained models (DDPG,PPO and RBC).Indicatevely in paper we used the trained models at 940000 so as at lines 23 and 27 the corresponding .zip files are loaded.
-
+- [Simulate_Actions3.py](/Chargym_Charging_Station/utils/Simulate_Actions3.py): more will be included.
+- [Simulate_Station3.py](/Chargym_Charging_Station/utils/Simulate_Station3.py): more will be included.
 
 - [RBC.py](Solvers/RBC/RBC.py): This implements the Rule Based Controller described in Equation 6 in the original paper. The controller checks each charging spot and collects the Departure timeplan of each connected EV. If an EV is going to depart during the next three hours, then the station is charging in full capacity this specific EV. On the other hand, if an EV does not depart during the next three hours, the station checks the current availability of the solar energy and charges the EV, based on that availability. The three hour time-limit, is selected based on the EV Charging Station attributes, since the EVs utilize 30kWh batteries, and the maximum charging ability of the station is 10kW. Thus, an EV needs three hours to charge from 0 to 100% SoC.
-
 - [rbc_main.py](Solvers/RBC/rbc_main.py): This is used if you want to use solely the Rule Based Controller.
 
 - [A2C.py](Solvers/RL/A2C.py): This python file includes conventional RL implementations such as DDPG, A2C etc.
+
+- [check_main.py](/Solvers/main.py): This is to check the Chargym environment.
+- [evaluate_trained_models.py](/Solvers/main.py): This is to evaluate the trained models (DDPG,PPO and RBC).Indicatevely in paper we used the trained models at 940000 so as at lines 23 and 27 the corresponding .zip files are loaded.
 
 
 
@@ -144,8 +139,9 @@ __Note that all states are normalized between 0 and 1__.
 
 ## Reward function
 
-The reward function is described in either [Simulate_RBC.py](/Chargym_Charging_Station/utils/Simulate_RBC.py) (for control_flag=0) or [Simulate_Actions.py](/Chargym_Charging_Station/utils/Simulate_Actions.py) (for case control_flag=1).
-```RBC_Cost``` is the reward function, which is the multiplication of the amount of energy used from the power grid with the current price of KWh (RBC_Cost = Grid_final*self.Energy["Price"][0,hour]).
+The reward function is described in [Simulate_Actions3.py](/Chargym_Charging_Station/utils/Simulate_Actions3.py).
+The main objective of the EVCS's controller / agent is to adopt a scheduling policy towards minimizing the cost for the electricity absorbed by the power grid. The reward function observed at each timestep _t_ is the electricity bill being payed by EVCS to the utility company (```Cost_1``` in line 46 which is Grid_final*self.Energy["Price"][0,hour]). However, an additional term is incorporated in order to present a more realistic and complete description ensuring that the controller will exploit effectively the available resources as well as fulfil the defined requirements. The second term considers penalizing situations involving EVs that are not completely charged (```Cost_3``` in line 60).
+
 
 ## How to run-Test example
 Chargym is designed to work with different controller approaches as mentioned above, including RBC, MPC, RL or other intelligent controllers. 
