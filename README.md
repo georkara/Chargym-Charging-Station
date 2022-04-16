@@ -115,7 +115,7 @@ pip install stable-baselines3[extra]
 - [evaluate_trained_models.py](/Solvers/main.py): This is to evaluate the trained models (DDPG,PPO and RBC).Indicatevely in paper we used the trained models at 940000 so as at lines 23 and 27 the corresponding .zip files are loaded.
 
 
-- [RBC.py](Solvers/RBC/RBC.py): This implements the Rule Based Controller described in Equation 6 in the original paper. The controller checks each charging spot and collects the Departure timeplan of each connected EV. If an EV is going to depart during the next three hours, then the station is charging in full capacity this specific EV. On the other hand, if an EV does not depart during the next three hours, the station checks the current availability of the solar energy and charges the EV, based on that availability. The three hour time-limit, is selected based on the EVCS attributes, since the EVs utilize 30kWh batteries, and the maximum charging ability of the station is 10kW. Thus, an EV needs three hours to charge from 0 to 100% SoC.
+- [RBC.py](Solvers/RBC/RBC.py): This implements the Rule Based Controller described in Equation 6 in the original paper. The controller checks each charging spot and collects the Departure timeplan of each connected EV. If an EV is going to depart during the next three hours, then the station is charging in full capacity this specific EV. On the other hand, if an EV does not depart during the next three hours, the station checks the current availability of the solar energy and charges the EV, based on that availability. The three hour time-limit, is selected based on the EV Charging Station attributes, since the EVs utilize 30kWh batteries, and the maximum charging ability of the station is 10kW. Thus, an EV needs three hours to charge from 0 to 100% SoC.
 
 - [rbc_main.py](Solvers/RBC/rbc_main.py): This is used if you want to use solely the Rule Based Controller.
 
@@ -124,17 +124,17 @@ pip install stable-baselines3[extra]
 
 
 ## Charging Station Environment Variables
-- States (10 in total)
+- States (28 in total)
   - ```self.disturbances[0]```: solar radiation at current time step
   - ```self.disturbances[1]```: value of price at current time step
   - ```self.predictions[0][0]```: one hour ahead solar radiation prediction  
   - ```self.predictions[0][1]```: two hours ahead solar radiation prediction  
   - ```self.predictions[0][2]```: three hours ahead solar radiation prediction  
-  - ```self.predictions[1][0]```: one hour ahead price prediction  
-  - ```self.predictions[1][1]```: two hours ahead price prediction  
-  - ```self.predictions[1][2]```: three hours ahead price prediction 
-  - ```self.states[0]```: mean value of state of charge of battery at current time step
-  - ```self.states[1]```: total value of power demand at current time step
+  - ```self.predictions[0][3]```: one hour ahead price prediction  
+  - ```self.predictions[0][4]```: two hours ahead price prediction  
+  - ```self.predictions[0][5]```: three hours ahead price prediction 
+  - ```self.states[0] - self.states[9]```: state of charge of the EV at i_th charging spot at current time step
+  - ```self.states[10] - self.states[19]```: the number of hours until departure for the EV at i_th charging spot
 
 States space: [0-1000, 0-300, 0-1000, 0-1000, 0-1000, 0-300, 0-300, 0-300, 0-100, 0-100]
 - Actions (1 action)
