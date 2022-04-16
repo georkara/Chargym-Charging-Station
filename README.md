@@ -145,7 +145,7 @@ The main objective of the EVCS's controller / agent is to adopt a scheduling pol
 
 ## How to run-Test example
 Chargym is designed to work with different controller approaches as mentioned above, including RBC, MPC, RL or other intelligent controllers. 
-The charging station environment and its interface is provided together with a Rule Based Controller (see __Chargym Description__). 
+The charging station environment and its interface is provided together with a Rule Based Controller as described above. 
 Also, we provide simple examples using well-known Reinforcement Learning approaches to present ready to run examples
 that are easy for users and practictioners to use.
 
