@@ -201,6 +201,9 @@ If you find this useful for your research, please use the following:
 ```
 Chargym: An EV Charging Station Model for Controller Benchmarking
 
+Karatzinis, G., Korkas, C., Terzopoulos, M., Tsaknakis, C., Stefanopoulou, A., Michailidis, I., & Kosmatopoulos, E.  (2022, June). Chargym: An EV Charging Station Model for Controller Benchmarking. In IFIP International Conference on Artificial Intelligence Applications and Innovations. Springer, Cham.
+
+
 ```
 
 ## Link
