@@ -82,7 +82,9 @@ pip install stable-baselines3[extra]
             └── Weather.mat
 
           ├── images
-            └── Chargym_interaction_system.jpg
+            ├── Chargym_interaction_system.jpg
+            ├── Comparison_Evaluation_Reward.png
+            └── indicative_tensorboard.png
 
           ├── utils
             ├── Energy_Calculations.py
