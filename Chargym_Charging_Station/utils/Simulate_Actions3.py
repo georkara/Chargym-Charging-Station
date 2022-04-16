@@ -47,9 +47,10 @@ def simulate_clever_control(self,actions):
 
     # Second Cost index
     # Penalty of wasted RES energy
+    # This is not used in this environment version
     # ----------------------------------------------------------------------------
-    RES_avail = max([RES_avail-Total_charging, 0])
-    Cost_2 = -RES_avail * (self.Energy["Price"][0, hour]/2)
+    # RES_avail = max([RES_avail-Total_charging, 0])
+    # Cost_2 = -RES_avail * (self.Energy["Price"][0, hour]/2)
 
     #Third Cost index
     #Penalty of not fully charging the cars that leave
