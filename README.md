@@ -137,7 +137,8 @@ pip install stable-baselines3[extra]
   - ```self.states[10] - self.states[19]```: the number of hours until departure for the EV at i<sub>th</sub> charging spot
 
 States space: [0-1000, 0-300, 0-1000, 0-1000, 0-1000, 0-300, 0-300, 0-300, 0-100, 0-100]
-_Note that all states are normalized between 0 and 1_.
+
+__Note that all states are normalized between 0 and 1__.
 - Actions (1 action)
   - ```action```: total charging rate of charging station at current time step (action space: [0-100])
 
