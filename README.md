@@ -197,7 +197,7 @@ This way the tensorboard will be opened by pressing on the localhost. Indicative
 ![Tensorboard](https://github.com/georkara/Chargym-Charging-Station/blob/main/Solvers/RL/indicative_tensorboard.png)__
 
 # Citation
-If you find this useful for your research, please use the following:
+If you find this useful for your research, please cite the following:
 ```
 Chargym: An EV Charging Station Model for Controller Benchmarking
 
