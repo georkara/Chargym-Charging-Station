@@ -8,43 +8,36 @@ The Chargym interaction system is illustrated below:
 
 
 ## Chargym Description
-The EV charging station is composed of one PV and 10 charging spots. 
+The EV charging station is composed of: i) a set of 10 charging spots; ii) one photovoltaic (PV) generation system; iii) power grid connection offering energy at a certain price and  iv) the vehicle to grid operation (V2G), which adds a Vehicle to Charging Station functionality, allowing the usage of energy stored in EVs for charging other EVs, when necessary.
+
 The station is connected with the grid absorbing electricity at a certain price, 
 when the available amount of energy is inadequate. The station's available amount of energy 
 (apart from the grid) is unfolded into two types:
-1) Stored energy (_aggregated battery_ consisted of the stayed EVs) and
+1) Stored energy in the cars that can be utilized under the V2G operation.
 2) Produced energy from the PV.
 
-Note that the term _aggregated battery_
-refers to a virtual battery storage that is formed from the available energy storage of EVs in a Vehicle to Charging Station perspective.
-Therefore, the environment describes a case where the stored energy in EVs, that are not going
-to departure in the near future, can be utilized from the station to satisfy the demands of other EVs that 
-have limited time until their departure time. This time interval is specified by default to be 2 hours. 
-Note that the user can modify this time interval/window.
-The EVs are identified between two profiles based on their departure time.
-If an EV has to leave the station within the next 2 hours, then it is classified as “leave”.
-Otherwise, it gets the label “stay”. This property allows the charging station to use the energy stored in the
-“stay” vehicles to satisfy the demands of the classified as “leave” ones as mentioned above. 
-Note also that each parking/charging spot can be used as many times as possible within day if available/free.
+Note that the term _stored energy_ refers to storage that is formed from the available energy storage of EVs in a Vehicle to Charging Station perspective.
+Therefore, the environment describes a case where the stored energy in EVs, can be utilized from the station (based on the control setpoints) to satisfy the demands of other EVs that have limited time until their departure time.
+Note also that each parking/charging spot can be used as many times as possible within day if available/free (see __Assumption 6__ below).
 
 The environment offers two operational options [ control_flag in class ```ChargingEnv``` in the file [Charging_Station_Enviroment.py](/Chargym_Charging_Station/envs/Charging_Station_Enviroment.py) ]. The first one is [Simulate_RBC.py](/Chargym_Charging_Station/utils/Simulate_RBC.py) (control_flag=0) while the second is [Simulate_Actions.py](/Chargym_Charging_Station/utils/Simulate_Actions.py) (control_flag=1).
 
 The main objective of this problem is to minimize the cost for the electricity absorbed by the power grid
-ensuring that all EVs reach the desired level of State of Charge (100% - see __Assumption 3__ below).
+ensuring that all EVs reach the desired level of State of Charge (100% - see __Assumption 2__ below). Thus, a penalty factor is induced in case that an EV departs with less that 100% State of Charge (see __Assumption 3__ below).
 
 ## Charging Station Assumptions
-_Assumption 1_: All EVs that arrive to the station are assumed to share the same characteristics related
-with their battery (type, capacity, charging/discharging rate, charging/discharging efficiency, battery efficiency).
+_Assumption 1_: All EVs that arrive to the station are assumed to share the same characteristics related with their battery (type, capacity, charging/ discharging rate, charging/ discharging efficiency, battery efficiency).
 
-_Assumption 2_: All EVs that are going to departure the next 2 hours will be charged (giving them priority
-to the available energy (PV generated and Vehicle to Charging Station stored energy(Virtual Battery))).
+_Assumption 2_: The desired State of Charge for every EV at departure time is 100%.
 
-_Assumption 3_: The desired State of Charge for every EV at departure time is 100%. 
+_Assumption 3_: If an EV departs with less than 100\% State of Charge, a penalty score is calculated. 
 
-_Assumption 4_: There is no upper limit of supply from the power grid. This way, the grid can supply the Charging
-Station with any amount of requested energy.
+_Assumption 4_: There is no upper limit of supply from the power grid. This way, the grid can supply the Charging Station with any amount of requested energy.
 
-_Assumption 5_: The maximum charging supply of each EV is dictated by charging/discharging rate of the station.
+_Assumption 5_: The maximum charging/discharging supply of each EV is dictated by charging/discharging rate of the station.
+
+_Assumption 6_: Each charging spot, can be used more than once per day.
+
 
 ## Installation-Requirements
 In order to install, download the zip file or use git.
@@ -183,7 +176,7 @@ __EXAMPLES WILL BE PRESENTED WITH FIGURES HERE__
 # Citation
 If you find this useful for your research, please use the following:
 ```
-Chargym: An EV Charging Station Model Library for Controller Benchmarking
+Chargym: An EV Charging Station Model for Controller Benchmarking
 
 ```
 
