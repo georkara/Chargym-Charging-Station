@@ -133,8 +133,8 @@ pip install stable-baselines3[extra]
   - ```self.predictions[0][3]```: one hour ahead price prediction  
   - ```self.predictions[0][4]```: two hours ahead price prediction  
   - ```self.predictions[0][5]```: three hours ahead price prediction 
-  - ```self.states[0] - self.states[9]```: state of charge of the EV at i_th charging spot at current time step
-  - ```self.states[10] - self.states[19]```: the number of hours until departure for the EV at i_th charging spot
+  - ```self.states[0] - self.states[9]```: state of charge of the EV at i<sub>th</sub>  charging spot at current time step
+  - ```self.states[10] - self.states[19]```: the number of hours until departure for the EV at i<sub>th</sub> charging spot
 
 States space: [0-1000, 0-300, 0-1000, 0-1000, 0-1000, 0-300, 0-300, 0-300, 0-100, 0-100]
 - Actions (1 action)
