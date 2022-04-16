@@ -26,8 +26,6 @@ done=False
 state = env.reset(reset_flag=0)
 rewards_list = []
 while not done:
-    # den eimai sigouros oti to apo katw xreiazetai
-    #state = env.get_obs()
     action = RBC.select_action(env.env,state)
     next_state, rewards, done, _ = env.step(action)
     #print(rewards)
