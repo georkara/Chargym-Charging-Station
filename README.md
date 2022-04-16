@@ -186,10 +186,10 @@ _If you want to train either DDPG or PPO using Chargym_:
 
 _If you want to evaluate the trained models_:
 1. __You have to modify by hand [Charging_Station_Enviroment.py](/Chargym_Charging_Station/envs/Charging_Station_Enviroment.py) in line 89 to:__
-``` def reset(self, reset_flag): ``` __removing the value of reset_flag__. This is because the reset_flag is specified in [evaluate_trained_models.py](/Solvers/evaluate_trained_models.py) in order to simulate diverse day configurations across episodes but the same say between all three implementations in order to evaluate them fairly as explained below. 
+``` def reset(self, reset_flag): ``` __removing the value of reset_flag__. (Comment: This is because the reset_flag is specified in [evaluate_trained_models.py](/Solvers/evaluate_trained_models.py) in order to simulate diverse day configurations across episodes but the same say between all three implementations in order to evaluate them fairly as will be explained below.)
     
 2. __then run [evaluate_trained_models.py](/Solvers/evaluate_trained_models.py) and you will get the comparison performance between DDPG, PPO and RBC__. 
-    According with the previous comment related with the reset_flag, note that reset_flag=0 means that the environment simulates/emulates a new day and reset_flag=1 means that simulates the same day. This way, in order to compare two RL algorithms with the RBC we need to specify reset_flag=0 at the start of each episode (right before) the DDPG and change to reset_flag=1 for the other two methods within the same episode. This way it will simulate the same day for all three approaches at each episode, but diverse days across episodes. __This is done within [evaluate_trained_models.py](/Solvers/evaluate_trained_models.py).__
+    (Comment: According with the previous comment related with the reset_flag, note that reset_flag=0 means that the environment simulates/emulates a new day and reset_flag=1 means that simulates the same day. This way, in order to compare two RL algorithms with the RBC we need to specify reset_flag=0 at the start of each episode (right before) the DDPG and change to reset_flag=1 for the other two methods within the same episode. This way it will simulate the same day for all three approaches at each episode, but diverse days across episodes.)
 
 _If you want to visualize the training_:
 1. __Use the following in the terminal: 
