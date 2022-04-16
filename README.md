@@ -8,7 +8,7 @@ The Chargym interaction system is illustrated below:
 
 You can fing the Chargym preprint paper in:
 
-![Chargym paper](https://github.com/georkara/Chargym-Charging-Station/blob/main/Chargym preprint paper.pdf)
+![Chargym paper](https://github.com/georkara/Chargym-Charging-Station/blob/main/Chargym_preprint_paper.pdf)
 
 
 ## Chargym Description
