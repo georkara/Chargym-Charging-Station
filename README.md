@@ -93,7 +93,8 @@ pip install stable-baselines3[extra]
 
         └── Solvers
           ├── RBC
-            └── RBC_controller.py
+            ├── RBC.py
+            └── rbc_main.py
           ├── RL
             └── A2C.py
           ├── check_env.py
@@ -114,7 +115,9 @@ pip install stable-baselines3[extra]
 - [evaluate_trained_models.py](/Solvers/main.py): This is to evaluate the trained models (DDPG,PPO and RBC).Indicatevely in paper we used the trained models at 940000 so as at lines 23 and 27 the corresponding .zip files are loaded.
 
 
-- [RBC_controller.py](Solvers/RBC/RBC_controller.py): RBC controller implementation.
+- [RBC.py](Solvers/RBC/RBC.py): This implements the Rule Based Controller described in Equation 6 in the original paper. The controller checks each charging spot and collects the Departure timeplan of each connected EV. If an EV is going to depart during the next three hours, then the station is charging in full capacity this specific EV. On the other hand, if an EV does not depart during the next three hours, the station checks the current availability of the solar energy and charges the EV, based on that availability. The three hour time-limit, is selected based on the EVCS attributes, since the EVs utilize 30kWh batteries, and the maximum charging ability of the station is 10kW. Thus, an EV needs three hours to charge from 0 to 100% SoC.
+
+- [rbc_main.py](Solvers/RBC/rbc_main.py): This is used if you want to use solely the Rule Based Controller.
 
 - [A2C.py](Solvers/RL/A2C.py): This python file includes conventional RL implementations such as DDPG, A2C etc.
 
