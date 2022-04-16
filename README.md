@@ -189,6 +189,10 @@ _If you want to evaluate the trained models_:
 ``` def reset(self, reset_flag): ``` __removing the value of reset_flag__.
 2. __then run [evaluate_trained_models.py](/Solvers/evaluate_trained_models.py) and you will get the comparison performance between DDPG, PPO and RBC__. 
 
+If you want to visualize the training use the following in the terminal: 
+```tensorboard --logdir logs```
+This way the tensorboard will be opened by pressing on the localhost. Indicatively you will have in your browser something like the following:
+![Tensorboard](https://github.com/georkara/Chargym-Charging-Station/blob/main/Solvers/RL/indicative_tensorboard.png)
 
 # Citation
 If you find this useful for your research, please use the following:
