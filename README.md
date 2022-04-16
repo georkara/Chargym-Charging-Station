@@ -180,7 +180,8 @@ env = gym.make(args.env)
 
 ### Ready to Use Examples
 
-__EXAMPLES WILL BE PRESENTED WITH FIGURES HERE__
+If you want to train either DDPG or PPO using Chargym run:
+[DDPG_train.py](Solvers/RL/DDPG_train.py) or [PPO_train.py](Solvers/RL/PPO_train.py)
 
 
 # Citation
