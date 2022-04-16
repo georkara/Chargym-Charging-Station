@@ -108,7 +108,7 @@ pip install stable-baselines3[extra]
 
 - [Charging_Station_Enviroment.py](/Chargym_Charging_Station/envs/Charging_Station_Enviroment.py): more will be included.
 
-- [main.py](/Solvers/main.py): This is to test the Chargym environment.
+- [check_env.py](/Solvers/main.py): This is to test the Chargym environment.
 
 - [RBC_controller.py](Solvers/RBC/RBC_controller.py): RBC controller implementation.
 
