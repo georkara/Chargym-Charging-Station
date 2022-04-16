@@ -149,7 +149,7 @@ In case that the user wants to check his/her own controller than the provided on
 call the make method specifying the name of the model (__ChargingEnv-v0__) as in other gym environments. You can
 place your custom algorithm in Folder ->  __Solvers__.
 
-If you want to test the environment then run the file located in __Solvers__ named: [check env.py](/Chargym_Charging_Station/Solvers/check_env.py)
+If you want to test the environment then run the file located in __Solvers__ named: [check_env.py](/Chargym_Charging_Station/Solvers/check_env.py)
 ```
 import gym
 import Chargym_Charging_Station
