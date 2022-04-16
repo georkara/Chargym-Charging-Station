@@ -6,6 +6,10 @@ The Chargym interaction system is illustrated below:
 
 ![Ev Station](https://github.com/georkara/Chargym-Charging-Station/blob/main/Chargym_Charging_Station/images/Chargym_interaction_system.jpg)
 
+You can fing the Chargym preprint paper in:
+
+![Chargym paper](https://github.com/georkara/Chargym-Charging-Station/blob/main/Chargym preprint paper.pdf)
+
 
 ## Chargym Description
 The EV charging station is composed of: i) a set of 10 charging spots; ii) one photovoltaic (PV) generation system; iii) power grid connection offering energy at a certain price and  iv) the vehicle to grid operation (V2G), which adds a Vehicle to Charging Station functionality, allowing the usage of energy stored in EVs for charging other EVs, when necessary.
