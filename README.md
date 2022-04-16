@@ -191,14 +191,14 @@ _If you want to evaluate the trained models_:
 ``` def reset(self, reset_flag): ``` __removing the value of reset_flag__. (Explanation comment: This is because the reset_flag is specified in [evaluate_trained_models.py](/Solvers/evaluate_trained_models.py) in order to simulate diverse day configurations across episodes but the same say between all three implementations in order to evaluate them fairly as will be explained below.)
     
 2. __then run [evaluate_trained_models.py](/Solvers/evaluate_trained_models.py) and you will get the comparison performance between DDPG, PPO and RBC such as:__ 
-![Comparison_Evaluation_Reward](https://github.com/georkara/Chargym-Charging-Station/blob/main/Solvers/Comparison_Evaluation_Reward.png)
+![Comparison_Evaluation_Reward](https://github.com/georkara/Chargym-Charging-Station/blob/main/Chargym_Charging_Station/images/Comparison_Evaluation_Reward.png)
  (Explanation comment: According to the previous comment related with the reset_flag, note that reset_flag=0 means that the environment simulates/emulates a new day and reset_flag=1 means that simulates the same day. This way, in order to compare two RL algorithms with the RBC the reset_flag=0 is already specified in [evaluate_trained_models.py](/Solvers/evaluate_trained_models.py) at the start of each episode (right before) calling DDPG and then changed to reset_flag=1 for the other two methods within the same episode. This way the script will simulate the same day for all three approaches at each episode, but diverse days across episodes. For more, check the comments in [evaluate_trained_models.py](/Solvers/evaluate_trained_models.py))
 
 _If you want to visualize the training_:
 1. __Use the following in the terminal: 
 ```tensorboard --logdir logs```
 This way the tensorboard will be opened by pressing on the localhost. Indicatively you will have in your browser something like the following:
-![Tensorboard](https://github.com/georkara/Chargym-Charging-Station/blob/main/Solvers/RL/indicative_tensorboard.png)__
+![Tensorboard](https://github.com/georkara/Chargym-Charging-Station/blob/main/Chargym_Charging_Station/images/indicative_tensorboard.png)__
 
 # Citation
 If you find this useful for your research, please cite the following:
