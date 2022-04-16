@@ -149,7 +149,7 @@ In case that the user wants to check his/her own controller than the provided on
 call the make method specifying the name of the model (__ChargingEnv-v0__) as in other gym environments. You can
 place your custom algorithm in Folder ->  __Solvers__.
 
-If you want to test the environment then run the file located in __Solvers__ named: [main.py](/Chargym_Charging_Station/Solvers/main.py)
+If you want to test the environment then run the file located in __Solvers__ named: [check env.py](/Chargym_Charging_Station/Solvers/check_env.py)
 ```
 import gym
 import Chargym_Charging_Station
@@ -160,11 +160,14 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("--env",
                         default="ChargingEnv-v0")  # OpenAI gym environment name #Pendulum-v1 RoboschoolHalfCheetah-v1
-#parser.add_argument("--price", default=1, type=int)
-#parser.add_argument("--solar", default=1, type=int)
-#parser.add_argument("--control_flag", default=1, type=int)
+## parser.add_argument("--price", default=1, type=int)
+## parser.add_argument("--solar", default=1, type=int)
+## parser.add_argument("--reset_flag", default=1, type=int)
+
+# Note that you need to specify the flags (price, solar and reset_flag within Charging_Station_Environment.py)
 args = parser.parse_args()
 env = gym.make(args.env)
+
 
 ```
 
