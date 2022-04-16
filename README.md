@@ -180,10 +180,9 @@ env = gym.make(args.env)
 
 ### Ready to Use Examples
 
-If you want to train either DDPG or PPO using Chargym run:
-[DDPG_train.py](Solvers/RL/DDPG_train.py) or [PPO_train.py](Solvers/RL/PPO_train.py) (__You have to specify by hand the reset_flag in [Charging_Station_Enviroment.py](/Chargym_Charging_Station/envs/Charging_Station_Enviroment.py) line 89 if you want to emulate different days(reset_flag=0) or the same simulated day (reset_flag=1) across episodes__)
-
-
+If you want to train either DDPG or PPO using Chargym:
+1. __You have to specify by hand the reset_flag in [Charging_Station_Enviroment.py](/Chargym_Charging_Station/envs/Charging_Station_Enviroment.py) line 89 if you want to emulate different days(reset_flag=0) or the same simulated day (reset_flag=1) across episodes__
+2. __then run [DDPG_train.py](Solvers/RL/DDPG_train.py) or [PPO_train.py](Solvers/RL/PPO_train.py)__
 
 # Citation
 If you find this useful for your research, please use the following:
