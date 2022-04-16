@@ -108,7 +108,7 @@ pip install stable-baselines3[extra]
 
 - [Charging_Station_Enviroment.py](/Chargym_Charging_Station/envs/Charging_Station_Enviroment.py): more will be included.
 
-- [check_env.py](/Solvers/main.py): This is to test the Chargym environment.
+- [check_main.py](/Solvers/main.py): This is to check the Chargym environment.
 
 - [RBC_controller.py](Solvers/RBC/RBC_controller.py): RBC controller implementation.
 
@@ -149,7 +149,7 @@ In case that the user wants to check his/her own controller than the provided on
 call the make method specifying the name of the model (__ChargingEnv-v0__) as in other gym environments. You can
 place your custom algorithm in Folder ->  __Solvers__.
 
-If you want to test the environment then run the file located in __Solvers__ named: [check_env.py](/Chargym_Charging_Station/Solvers/check_env.py)
+If you want to check the environment then run the file located in __Solvers__ named: [check_main.py](/Chargym_Charging_Station/Solvers/check_main.py)
 ```
 import gym
 import Chargym_Charging_Station
