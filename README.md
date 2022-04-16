@@ -96,7 +96,8 @@ pip install stable-baselines3[extra]
             └── RBC_controller.py
           ├── RL
             └── A2C.py
-          └── check_env.py
+          ├── check_env.py
+          └── evaluate_trained_models.py
           
 
 
@@ -109,6 +110,9 @@ pip install stable-baselines3[extra]
 - [Charging_Station_Enviroment.py](/Chargym_Charging_Station/envs/Charging_Station_Enviroment.py): more will be included.
 
 - [check_main.py](/Solvers/main.py): This is to check the Chargym environment.
+
+- [evaluate_trained_models.py](/Solvers/main.py): This is to evaluate the trained models (DDPG,PPO and RBC).Indicatevely in code we used the trained models at 940000 so as at lines 23 and 27 the zip files at this stage are loaded.
+
 
 - [RBC_controller.py](Solvers/RBC/RBC_controller.py): RBC controller implementation.
 
