@@ -96,7 +96,7 @@ pip install stable-baselines3[extra]
             └── RBC_controller.py
           ├── RL
             └── A2C.py
-          └── main.py
+          └── check_env.py
           
 
 
