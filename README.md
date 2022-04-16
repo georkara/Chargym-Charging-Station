@@ -115,8 +115,8 @@ pip install stable-baselines3[extra]
 - [DDPG_train.py](Solvers/RL/DDPG_train.py): This python file includes conventional DDPG implementation. __Note that when you run this script 2 additional folders will be created including log files and the trained model at different stages. The later will be used in order to evaluate the trained algorithm during the evaluation phase__.
 - [PPO_train.py](Solvers/RL/PPO_train.py): This python file includes conventional PPO implementation. __Note that when you run this script 2 additional folders will be created including log files and the trained model at different stages as in DDPG case. Logs and models have the corresponding tag 'PPO-'. The trained model will be used in order to evaluate the PPO algorithm during the evaluation phase__.
 
-- [check_main.py](/Solvers/main.py): This is to check the Chargym environment.
-- [evaluate_trained_models.py](/Solvers/main.py): This is to evaluate the trained models (DDPG,PPO and RBC).Indicatevely in paper we used the trained models at 940000 so as at lines 23 and 27 the corresponding .zip files are loaded.
+- [check_main.py](/Solvers/check_main.py): This is to check the Chargym environment.
+- [evaluate_trained_models.py](/Solvers/evaluate_trained_models.py): This is to evaluate the trained models (DDPG,PPO and RBC).Indicatevely in paper we used the trained models at 940000 so as at lines 23 and 27 the corresponding .zip files are loaded.
 
 
 
@@ -181,8 +181,13 @@ env = gym.make(args.env)
 ### Ready to Use Examples
 
 If you want to train either DDPG or PPO using Chargym:
-1. __You have to specify by hand the reset_flag in [Charging_Station_Enviroment.py](/Chargym_Charging_Station/envs/Charging_Station_Enviroment.py) line 89 if you want to emulate different days(reset_flag=0) or the same simulated day (reset_flag=1) across episodes__
-2. __then run [DDPG_train.py](Solvers/RL/DDPG_train.py) or [PPO_train.py](Solvers/RL/PPO_train.py)__
+1. __You have to specify by hand the reset_flag in [Charging_Station_Enviroment.py](/Chargym_Charging_Station/envs/Charging_Station_Enviroment.py) line 89 if you want to emulate different days(reset_flag=0) or the same simulated day (reset_flag=1) across episodes__.
+2. __then run [DDPG_train.py](Solvers/RL/DDPG_train.py) or [PPO_train.py](Solvers/RL/PPO_train.py)__.
+
+If you want to evaluate the trained models:
+1. __You have to modify by hand [Charging_Station_Enviroment.py](/Chargym_Charging_Station/envs/Charging_Station_Enviroment.py) in line 89 to def reset(self, reset_flag) removing the value of reset_flag__.
+2. __then run [evaluate_trained_models.py](/Solvers/evaluate_trained_models.py) and you will get the comparison performance between DDPG, PPO and RBC__. 
+
 
 # Citation
 If you find this useful for your research, please use the following:
