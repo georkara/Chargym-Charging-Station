@@ -140,7 +140,7 @@ States space: [0-1000, 0-300, 0-1000, 0-1000, 0-1000, 0-300, 0-300, 0-300, 0-100
 
 __Note that all states are normalized between 0 and 1__.
 - Actions (1 action per charging spot, 10 in total)
-  - ```action```: One action per spot defining the charging or discharging rate of each vehicle spot. These 10 action set-points are defined as continuous variables, which are constrained in the interval __[-1,1]__.
+  - ```actions```: One action per spot defining the charging or discharging rate of each vehicle spot. These 10 action set-points are defined as continuous variables, which are constrained in the interval __[-1,1]__.
 
 ## Reward function
 
