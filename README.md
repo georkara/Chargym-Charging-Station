@@ -197,8 +197,7 @@ _If you want to evaluate the trained models_:
 
 _If you want to visualize the training_:
 1. __Use the following in the terminal: 
-```tensorboard --logdir logs``` or you may need the specific path. For me it is ```tensorboard --logdir=E:\Projects\Chargym-Charging-Station\Solvers\DDPG\logs
-```
+```tensorboard --logdir logs``` or you may need the specific path. For me it is ```tensorboard --logdir=E:\Projects\Chargym-Charging-Station\Solvers\DDPG\logs```
 This way the tensorboard will be opened by pressing on the localhost. Indicatively you will have in your browser something like the following:
 ![Tensorboard](https://github.com/georkara/Chargym-Charging-Station/blob/main/Chargym_Charging_Station/images/Indicative_tensorboard.png)__
 
