@@ -41,9 +41,9 @@ _Assumption 6_: Each charging spot, can be used more than once per day.
 
 
 ## Installation-Requirements
-In order to install, download the zip file or use git.
+__In order to install, download the zip file or use git.
 Open project and in the _Creating Virtual Environment_ panel for example in PyCharm choose interpreter (_we recommend an environment with Python version 3.7 or above_ because the provided examples are based on Stable-Baselines3
-[SB3](https://github.com/DLR-RM/stable-baselines3). But if you want you can use other implementations too.) and keep _requirements.txt_ in the _Dependencies_ option. Alternatively, you can follow the following commands:
+[SB3](https://github.com/DLR-RM/stable-baselines3). But if you want you can use other implementations too.) and keep _requirements.txt_ in the _Dependencies_ option.__ Alternatively, you can follow the following commands:
 
 ```console
 cd Chargym-Charging-Station-main
