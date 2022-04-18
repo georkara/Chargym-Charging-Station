@@ -22,7 +22,6 @@ Note that the term _stored energy_ refers to storage that is formed from the ava
 Therefore, the environment describes a case where the stored energy in EVs, can be utilized from the station (based on the control setpoints) to satisfy the demands of other EVs that have limited time until their departure time.
 Note also that each parking/charging spot can be used as many times as possible within day if available/free (see __Assumption 6__ below).
 
-The environment offers two operational options [ control_flag in class ```ChargingEnv``` in the file [Charging_Station_Enviroment.py](/Chargym_Charging_Station/envs/Charging_Station_Enviroment.py) ]. The first one is [Simulate_RBC.py](/Chargym_Charging_Station/utils/Simulate_RBC.py) (control_flag=0) while the second is [Simulate_Actions.py](/Chargym_Charging_Station/utils/Simulate_Actions.py) (control_flag=1).
 
 The main objective of this problem is to minimize the cost for the electricity absorbed by the power grid
 ensuring that all EVs reach the desired level of State of Charge (100% - see __Assumption 2__ below). Thus, a penalty factor is induced in case that an EV departs with less that 100% State of Charge (see __Assumption 3__ below).
@@ -47,7 +46,7 @@ Open project, choose system interpreter (_we recommend an environment with Pytho
 [SB3](https://github.com/DLR-RM/stable-baselines3). But if you want you can use other implementations too.) and follow the command:
 
 ```console
-cd Chargym-Charging-Station
+cd Chargym-Charging-Station-main
 pip install -e .
 pip install stable-baselines3[extra]
 ```
