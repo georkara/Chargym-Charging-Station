@@ -105,10 +105,10 @@ Keep in mind to include [requirements.txt](requirements.txt) for a list of Pytho
 
 - [Charging_Station_Enviroment.py](/Chargym_Charging_Station/envs/Charging_Station_Enviroment.py): Describes the general Electrical Vecicles Charging Station universe.
 
-- [Energy_Calculations.py](/Chargym_Charging_Station/utils/Energy_Calculations.py): more will be included.
-- [Init_Values.py](/Chargym_Charging_Station/utils/Init_Values.py): Provides stochastic arrival-departure of EVs and stochastic Battery State of Charge within day.
-- [Simulate_Actions3.py](/Chargym_Charging_Station/utils/Simulate_Actions3.py): more will be included.
-- [Simulate_Station3.py](/Chargym_Charging_Station/utils/Simulate_Station3.py): more will be included.
+- [Energy_Calculations.py](/Chargym_Charging_Station/utils/Energy_Calculations.py): Includes pricing profiles and calculates PV energy production.
+- [Init_Values.py](/Chargym_Charging_Station/utils/Init_Values.py): Provides initial values per day related with arrival-departure of EVs and Battery State of Charge.
+- [Simulate_Actions3.py](/Chargym_Charging_Station/utils/Simulate_Actions3.py): Demand, next state of battery, energy utilization from PV calculations and reward function.
+- [Simulate_Station3.py](/Chargym_Charging_Station/utils/Simulate_Station3.py): Calculates the leaving time of each car, while also the Battery State of Charge of each car in the station.
 
 - [RBC.py](Solvers/RBC/RBC.py): This implements the Rule Based Controller described in Equation 6 in the original paper. The controller checks each charging spot and collects the Departure timeplan of each connected EV. If an EV is going to depart during the next three hours, then the station is charging in full capacity this specific EV. On the other hand, if an EV does not depart during the next three hours, the station checks the current availability of the solar energy and charges the EV, based on that availability. The three hour time-limit, is selected based on the EV Charging Station attributes, since the EVs utilize 30kWh batteries, and the maximum charging ability of the station is 10kW. Thus, an EV needs three hours to charge from 0 to 100% SoC.
 - [rbc_main.py](Solvers/RBC/rbc_main.py): This is used if you want to use solely the Rule Based Controller.
