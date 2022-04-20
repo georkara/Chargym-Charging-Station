@@ -106,7 +106,7 @@ Keep in mind to include [requirements.txt](requirements.txt) for a list of Pytho
 - [Charging_Station_Enviroment.py](/Chargym_Charging_Station/envs/Charging_Station_Enviroment.py): Describes the general Electrical Vecicles Charging Station universe.
 
 - [Energy_Calculations.py](/Chargym_Charging_Station/utils/Energy_Calculations.py): more will be included.
-- [Init_Values.py](/Chargym_Charging_Station/utils/Init_Values.py): more will be included.
+- [Init_Values.py](/Chargym_Charging_Station/utils/Init_Values.py): Provides stochastic arrival-departure of EVs and stochastic Battery State of Charge within day.
 - [Simulate_Actions3.py](/Chargym_Charging_Station/utils/Simulate_Actions3.py): more will be included.
 - [Simulate_Station3.py](/Chargym_Charging_Station/utils/Simulate_Station3.py): more will be included.
 
