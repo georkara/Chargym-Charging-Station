@@ -202,7 +202,14 @@ This way the tensorboard will be opened by pressing on the localhost. Indicative
 # Citation
 If you find this useful for your research, please cite the following:
 ```
-Karatzinis, G., Korkas, C., Terzopoulos, M., Tsaknakis, C., Stefanopoulou, A., Michailidis, I., & Kosmatopoulos, E.  (2022, June). Chargym: An EV Charging Station Model for Controller Benchmarking. In IFIP International Conference on Artificial Intelligence Applications and Innovations. Springer, Cham.
+@inproceedings{karatzinis2022chargym,
+  title={Chargym: An EV Charging Station Model for Controller Benchmarking},
+  author={Karatzinis, Georgios and Korkas, Christos and Terzopoulos, Michalis and Tsaknakis, Christos and Stefanopoulou, Aliki and Michailidis, Iakovos and Kosmatopoulos, Elias},
+  booktitle={IFIP International Conference on Artificial Intelligence Applications and Innovations},
+  pages={241--252},
+  year={2022},
+  organization={Springer}
+}
 ```
 
 ## Link
