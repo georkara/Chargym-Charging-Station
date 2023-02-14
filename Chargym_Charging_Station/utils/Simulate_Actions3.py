@@ -8,6 +8,7 @@ def simulate_clever_control(self,actions):
     Consumed=self.Energy['Consumed']
     Renewable=self.Energy['Renewable']
     present_cars = self.Invalues['present_cars']
+    #print(present_cars[:,hour])
 
     leave=self.leave
     BOC=self.BOC
@@ -23,8 +24,12 @@ def simulate_clever_control(self,actions):
             max_charging_energy = min([10, BOC[car, hour] * self.EV_Param['EV_capacity']])
         # in case action=[-100,100] P_charging[car] = actions[car]/100*max_charging_energy otherwise if action=[-1,1] P_charging[car] = 100*actions[car]/100*max_charging_energy
 
-        # P_charging[car] = 100*actions[car]/100*max_charging_energy
-        P_charging[car] = 100*actions[car]/100*max_charging_energy
+        #P_charging[car] = actions[car]/100*max_charging_energy
+        #P_charging[car] = 100 * actions[car] / 100 * max_charging_energy
+        if present_cars[car, hour] == 1:
+            P_charging[car] = 100*actions[car]/100*max_charging_energy
+        else:
+            P_charging[car] = 0
 
     # Calculation of next state of Battery based on actions
     # ----------------------------------------------------------------------------
@@ -63,6 +68,5 @@ def simulate_clever_control(self,actions):
 
 
     Cost = Cost_1 + Cost_3
-
 
     return Cost,Grid_final,RES_avail,Cost_3,BOC
